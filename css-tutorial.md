@@ -232,9 +232,63 @@ div > p {
 
 ### ผลการทดลอง
 ```html
-[วางโค้ดที่นี่]
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* การใช้ Element Selector */
+        nav {
+            background-color: hsl(0, 100%, 77%);
+            padding: 15px;
+        }
+
+        /* การใช้ Descendant Selector */
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        /* การใช้ Child Selector */
+        nav > ul > li {
+            margin: 0 10px;
+        }
+
+        /* การใช้ Class Selector */
+        .menu-item {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+
+        /* การใช้ Pseudo-class */
+        .menu-item:hover {
+            background-color: rgb(255, 104, 104);
+            border-radius: 3px;
+        }
+
+        /* การใช้ ID Selector */
+        #active {
+            background-color: hsl(0, 93%, 38%);
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" class="menu-item" id="active">หน้าแรก</a></li>
+            <li><a href="#" class="menu-item">สินค้า</a></li>
+            <li><a href="#" class="menu-item">เกี่ยวกับเรา</a></li>
+            <li><a href="#" class="menu-item">ติดต่อ</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
 ```
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![1](https://github.com/user-attachments/assets/47e6a526-224d-429d-bab0-eccaf59608cb)
 
 
 [](#การทดลองที่-3-การจัดการสีและพื้นหลัง)
@@ -338,9 +392,169 @@ background-size: cover;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ดที่นี่]
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            p {
+                color: hsl(240, 100%, 94%);
+                font-size: 16px;
+            }
+        </style>
+    [<!DOCTYPE html>
+    <html>
+    <head>
+        <title>yourTeddy</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Arial', sans-serif;
+            }
+            nav {
+                background-color: hsl(0, 85%, 58%);;
+                padding: 20px;
+            }
+            nav ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+            }
+            nav > ul > li {
+                margin: 0 10px;
+            }
+            .menu-item {
+                color: white;
+                text-decoration: none;
+                padding: 20px 20px;
+            }
+            .menu-item:hover {
+                background-color: #555;
+                border-radius: 3px;
+            }
+            
+            #active {
+                background-color: #007bff;
+                border-radius: 3px;
+            }
+            .product-container {
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                padding: 20px;
+            }
+            .product-card {
+                width: 300px;
+                border-radius: 8px;
+                overflow: hidden;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                background-color: hsl(312, 100%, 89%);
+                margin-bottom: 20px;
+            }
+            .product-image img {
+                width: 100%;
+                height: 230px;
+                object-fit: cover;
+            }
+            .product-info {
+                padding: 15px;
+            }
+            .product-title {
+                color: #333;
+                font-size: 18px;
+                margin-bottom: 10px;
+            }
+            .product-price {
+                color: hwb(0 8% 0%);
+                font-size: 24px;
+                font-weight: bold;
+            }
+            .product-description {
+                color: hwb(0 23% 73%);
+                font-size: 14px;
+                line-height: 1.5;
+            }
+            .product-button {
+                display: block;
+                background: linear-gradient(to right, hsl(355, 100%, 65%), #ff192c); /* Change this to your desired gradient */
+                color: white;
+                text-align: center;
+                padding: 10px;
+                text-decoration: none;
+                margin-top: 15px;
+                border-radius: 4px;
+            }
+            .product-button:hover {
+                background: linear-gradient(to right, hsl(355, 100%, 65%), #ff192c); /* Change this to a slightly darker gradient */
+            }
+        </style>
+    </head>
+<head>
+    
+    <link rel="stylesheet" href="css/style1.css">
+</head>
+<body>
+
+    <div class="product-container">
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/p1.jpg" alt="ตุ๊กตาหมีชุดคู่">
+            </div>
+            <div class="product-info">
+                <h2 class="product-title">ตุ๊กตาหมีชุดคู่</h2>
+                <p class="product-price">฿150</p>
+                <p class="product-description">เหมาะสำหรับมอบให้วันวาเลนไทน์</p>
+                <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/p2.jpg" alt="ตุ๊กตาหมี">
+            </div>
+            <div class="product-info">
+                <h2 class="product-title">ตุ๊กตาหมี</h2>
+                <p class="product-price">฿99</p>
+                <p class="product-description">เหมาะสำหรับคนอยากมีคู่อยู่ข้างๆ</p>
+                <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/p3.jpg" alt="ตุ๊กตาหมีชุดแต่งงาน">
+            </div>
+            <div class="product-info">
+                <h2 class="product-title">ตุ๊กตาหมีชุดแต่งงาน</h2>
+                <p class="product-price">฿170</p>
+                <p class="product-description">เหมาะสำหรับเป็นของขวัญวันแต่งงาน</p>
+                <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/p4.jpg" alt="ตุ๊กตาหมีมอบดอกไม้">
+            </div>
+            <div class="product-info">
+                <h2 class="product-title">ตุ๊กตาหมีมอบดอกไม้</h2>
+                <p class="product-price">฿99</p>
+                <p class="product-description">เหมาะสำหรับมอบให้คนรักทุกเทศกาล</p>
+                <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
 ```
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![2](https://github.com/user-attachments/assets/0f5c13b2-3076-438c-8b58-5c3de2305204)
+
 
 [](#การทดลองที่-4-การจัดการขนาดและระยะห่าง)
 ## การทดลองที่ 4: การจัดการขนาดและระยะห่าง
@@ -436,12 +650,76 @@ border: 1px solid black;
 
 ### ผลการทดลอง
 ```html
-[วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="css/style2.css">
+</head>
+<body>
+    <div class="stats-container">
+        <div class="stat-box">
+            <div class="stat-number">5,444</div>
+            <div class="stat-label">ผู้ใช้งาน</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-number">8.7K</div>
+            <div class="stat-label">ยอดขาย</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-number">98%</div>
+            <div class="stat-label">ความพึงพอใจ</div>
+        </div>
+    </div>
+</body>
+</html>
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+        .stats-container {
+            display: flex;
+            justify-content: space-around;
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        .stat-box {
+            flex: 1;
+            margin: 0 15px;
+            padding: 2rem;
+            text-align: center;
+            background-color: hsl(306, 100%, 77%);
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #000000;
+            margin-bottom: 0.5rem;
+        }
+        .stat-label {
+            font-size: 1rem;
+            color:#000000 ;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .stats-container {
+                flex-direction: column;
+            }
+            .stat-box {
+                margin: 1rem 0;
+            }
+        }
+</style>
 ```
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![3](https://github.com/user-attachments/assets/150882d6-43f5-4cf7-92d0-6bcffd2566ad)
+
 
 [](#การทดลองที่-5-การจัดการข้อความและฟอนต์)
 ## การทดลองที่ 5: การจัดการข้อความและฟอนต์
