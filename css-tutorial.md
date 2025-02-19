@@ -1440,9 +1440,278 @@ blockquote {
 ### ผลการทดลอง
 ```html
 [วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modern Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="dashboard">
+<header class="header">
+<h1>แดชบอร์ด</h1>
+<nav>
+<button class="btn">โปรไฟล์</button>
+<button class="btn logout">ออกจากระบบ</button>
+</nav>
+</header>
+<aside class="sidebar">
+<ul>
+<li><a href="#">หน้าแรก</a></li>
+<li><a href="#">รายงาน</a></li>
+<li><a href="#">การตั้งค่า</a></li>
+</ul>
+</aside>
+<main class="main-content">
+<div class="stats-grid">
+<div class="stat-card"><h3>ยอดขายรวม</h3><p>฿9,999,999</p></div>
+<div class="stat-card"><h3>จำนวนออเดอร์</h3><p>999,999</p></div>
+<div class="stat-card"><h3>ลูกค้าใหม่</h3><p>999,999</p></div>
+</div>
+<div class="chart-container">
+<div class="chart"><h3>กราฟแสดงยอดขาย</h3></div>
+<div class="chart"><h3>สัดส่วนสินค้าขายดี</h3></div>
+</div>
+</main>
+</div>
+</body>
+</html>
 ```
 ```css
 [วางโค้ด CSS ที่นี่]
+<style>
+    {
+        margin: 0;
+
+        padding: 0;
+
+        box-sizing: border-box;
+
+        font-family: 'Sarabun', sans-serif;
+
+    }
+
+    .dashboard {
+
+        display: grid;
+
+        grid-template-areas: 
+
+            "sidebar header"
+
+            "sidebar main";
+
+        grid-template-columns: 250px 1fr;
+
+        grid-template-rows: auto 1fr;
+
+        min-height: 100vh;
+
+    }
+
+    .header {
+
+        grid-area: header;
+
+        background: #a202b7;
+
+        padding: 1rem 2rem;
+
+        box-shadow: 0 4px 8px rgba(238, 217, 29, 0.1);
+
+        display: flex;
+
+        justify-content: space-between;
+
+        align-items: center;
+
+    }
+
+    .btn {
+
+        background: #007bff;
+
+        color: rgb(255, 0, 0);
+
+        border: none;
+
+        padding: 10px 15px;
+
+        border-radius: 5px;
+
+        cursor: pointer;
+
+        transition: 0.3s;
+
+    }
+
+    .btn:hover {
+
+        background: #1ed93d;
+
+    }
+
+    .logout {
+
+        background: #3bdc35;
+
+    }
+
+    .logout:hover {
+
+        background: #4dda37;
+
+    }
+
+    .sidebar {
+
+        grid-area: sidebar;
+
+        background: #ffd900;
+
+        color: rgb(87, 81, 4);
+
+        padding: 1.5rem;
+
+    }
+
+    .sidebar ul {
+
+        list-style: none;
+
+    }
+
+    .sidebar ul li {
+
+        margin-bottom: 1rem;
+
+    }
+
+    .sidebar ul li a {
+
+        color: rgb(0, 0, 0);
+
+        text-decoration: none;
+
+        font-size: 1.1rem;
+
+        transition: 0.3s;
+
+    }
+
+    .sidebar ul li a:hover {
+
+        color: #1abc9c;
+
+    }
+
+    .main-content {
+
+        grid-area: main;
+
+        padding: 2rem;
+
+        background: #f48507;
+
+    }
+
+    .stats-grid {
+
+        display: grid;
+
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+        gap: 1rem;
+
+        margin-bottom: 2rem;
+
+    }
+
+    .stat-card {
+
+        background: rgb(240, 198, 125);
+
+        padding: 1.5rem;
+
+        border-radius: 10px;
+
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+
+        text-align: center;
+
+    }
+
+    .stat-card h3 {
+
+        color: #333;
+
+        margin-bottom: 10px;
+
+    }
+
+    .stat-card p {
+
+        font-size: 1.5rem;
+
+        font-weight: bold;
+
+        color: #00ff5e;
+
+    }
+
+    .chart-container {
+
+        display: grid;
+
+        grid-template-columns: 2fr 1fr;
+
+        gap: 1rem;
+
+    }
+
+    .chart {
+
+        background: rgb(8, 0, 255);
+
+        padding: 1.5rem;
+
+        border-radius: 10px;
+
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+
+    }
+
+    @media (max-width: 768px) {
+
+        .dashboard {
+
+            grid-template-areas: 
+
+                "header"
+
+                "main";
+
+            grid-template-columns: 1fr;
+
+        }
+
+        .sidebar {
+
+            display: none;
+
+        }
+
+        .chart-container {
+
+            grid-template-columns: 1fr;
+
+        }
+
+    } 
+</style>
 ```
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![m62](https://github.com/user-attachments/assets/353f2db0-7fe0-4c83-bd79-5c77ed3be90a)
 
