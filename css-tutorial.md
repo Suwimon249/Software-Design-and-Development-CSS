@@ -1174,11 +1174,124 @@ blockquote {
 ### ผลการทดลอง
 ```html
 [วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<div class="product-card">
+<div class="product-image"></div>
+<div class="product-info">
+<img src="Images/fan1.jpg" alt="ceiling fan"
+<h2 class="product-title"><h2>ceiling fan</h2>
+<p class="product-price">$1,200</p>
+<p class="product-description">
+
+    Ceiling fans provide even cooling.
+</p>
+<a href="#" class="product-button">ADD TO CART</a>
+</div>
+</div>
+</body>
+</html> 
 ```
 ```css
-[วางโค้ด CSS ที่นี่]
+[วางโค้ด CSS ที่นี่
+<style>
+
+    .product-card {
+
+        width: 400px;
+
+        border-radius: 8px;
+
+        overflow: hidden;
+
+        box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+
+        background-color: rgb(255, 255, 255);
+
+    }
+
+    .product-image {
+
+        width: 100%;
+
+        height: 20px;
+
+        background-image: url('product.jpg');
+
+        background-size: cover;
+
+        background-position: center;
+
+    }
+
+    .product-info {
+
+        padding: 15px;
+
+    }
+
+    .product-title {
+
+        color: #030101;
+
+        font-size: 18px;
+
+        margin-bottom: 10px;
+
+    }
+
+    .product-price {
+
+        color: #d9ff00;
+
+        font-size: 24px;
+
+        font-weight: bold;
+
+    }
+
+    .product-description {
+
+        color: #735204;
+
+        font-size: 14px;
+
+        line-height: 1.5;
+
+    }
+
+    .product-button {
+
+        display: block;
+
+        background: linear-gradient(to right, #ff009d, #900d3d);
+
+        color: white;
+
+        text-align: center;
+
+        padding: 10px;
+
+        text-decoration: none;
+
+        margin-top: 15px;
+
+        border-radius: 4px;
+
+    }
+
+    .product-button:hover {
+
+        background: linear-gradient(to right, #0056b3, #003980);
+
+    }
+</style> 
 ```
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![m6 1](https://github.com/user-attachments/assets/44661ad7-48a9-4cef-b2cb-ea5abf85a4b3)
 
 
 ### ตัวอย่างการใช้งาน: การสร้างเลย์เอาต์ Modern Dashboard
